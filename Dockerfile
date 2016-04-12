@@ -1,5 +1,5 @@
 FROM heroku/cedar:14
-MAINTAINER Terence Lee <terence@heroku.com>
+MAINTAINER Naokazu Terada <naokazu.terada@gmail.com>
 
 RUN mkdir -p /app/user
 WORKDIR /app/user
@@ -22,6 +22,9 @@ ENV PATH /app/heroku/ruby/node-0.12.7/bin:$PATH
 RUN gem install bundler -v 1.9.10 --no-ri --no-rdoc
 ENV PATH /app/user/bin:/app/heroku/ruby/bundle/ruby/2.2.0/bin:$PATH
 ENV BUNDLE_APP_CONFIG /app/heroku/ruby/.bundle/config
+
+# Install Firefox
+RUN apt-get update && apt-get install -y firefox
 
 # Run bundler to cache dependencies
 ONBUILD COPY ["Gemfile", "Gemfile.lock", "/app/user/"]
