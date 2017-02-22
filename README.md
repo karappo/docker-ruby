@@ -5,7 +5,8 @@ This image is for use with Heroku Docker CLI.
 ## For Developper
 
 - Create new branch (like `ruby-2.3.1`)
-- Add auto build setting on [here](https://hub.docker.com/r/karappo/ruby/~/settings/automated-builds/) with branch name above
+- Add [auto build setting](https://hub.docker.com/r/karappo/ruby/~/settings/automated-builds/) with branch name above
+- Modify Dockerfile
 - Push branch to origin
 
 ## Usage
