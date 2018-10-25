@@ -23,14 +23,6 @@ RUN gem install bundler -v 1.16.6 --no-ri --no-rdoc
 ENV PATH /app/user/bin:/app/heroku/ruby/bundle/ruby/2.5.0/bin:$PATH
 ENV BUNDLE_APP_CONFIG /app/heroku/ruby/.bundle/config
 
-RUN apt-get update
-
-# Install Firefox
-RUN apt-get install -y firefox
-
-# Install PhantomJS
-RUN apt-get install phantomjs
-
 # Run bundler to cache dependencies
 ONBUILD COPY ["Gemfile", "Gemfile.lock", "/app/user/"]
 ONBUILD RUN bundle install --path /app/heroku/ruby/bundle --jobs 4
