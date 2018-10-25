@@ -19,7 +19,7 @@ RUN mv /app/heroku/ruby/node-v0.12.7-linux-x64 /app/heroku/ruby/node-0.12.7
 ENV PATH /app/heroku/ruby/node-0.12.7/bin:$PATH
 
 # Install Bundler
-RUN gem install bundler -v 1.9.10 --no-ri --no-rdoc
+RUN gem install bundler -v 1.16.6 --no-ri --no-rdoc
 ENV PATH /app/user/bin:/app/heroku/ruby/bundle/ruby/2.5.0/bin:$PATH
 ENV BUNDLE_APP_CONFIG /app/heroku/ruby/.bundle/config
 
