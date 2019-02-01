@@ -4,7 +4,7 @@ This image is for use with Heroku Docker CLI.
 
 ## For Developper
 
-- Create new branch (like `ruby-2.3.1`)
+- Create new branch (like `ruby-2.5.3`)
 - Add [auto build setting](https://hub.docker.com/r/karappo/ruby/~/settings/automated-builds/) with branch name above
 - Modify Dockerfile
 - Push branch to origin
@@ -14,7 +14,7 @@ This image is for use with Heroku Docker CLI.
 Your project must contain the following files:
 
 * `Gemfile` and `Gemfile.lock`
-* Ruby 2.3.1
+* Ruby 2.5.3
 * `assets:precompile` rake task
 * `Procfile` (see [the Heroku Dev Center for details](https://devcenter.heroku.com/articles/procfile))
 
