@@ -16,7 +16,7 @@ ENV PATH /app/heroku/ruby/ruby-2.5.3/bin:$PATH
 # Install Node
 RUN curl -s --retry 3 -L http://s3pository.heroku.com/node/v10.14.2/node-v10.14.2-linux-x64.tar.gz | tar xz -C /app/heroku/ruby/
 RUN mv /app/heroku/ruby/node-v10.14.2-linux-x64 /app/heroku/ruby/node-10.14.2
-ENV PATH /app/heroku/ruby/node-10.14./bin:$PATH
+ENV PATH /app/heroku/ruby/node-10.14.2/bin:$PATH
 
 # Install Bundler
 RUN gem install bundler -v 1.16.6 --no-ri --no-rdoc
