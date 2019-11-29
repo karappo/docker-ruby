@@ -9,9 +9,9 @@ ENV GEM_HOME /app/heroku/ruby/bundle/ruby/2.5.0
 RUN mkdir -p /app/heroku/ruby/bundle/ruby/2.5.0
 
 # Install Ruby
-RUN mkdir -p /app/heroku/ruby/ruby-2.5.3
-RUN curl -s --retry 3 -L https://heroku-buildpack-ruby.s3.amazonaws.com/cedar-14/ruby-2.5.3.tgz | tar xz -C /app/heroku/ruby/ruby-2.5.3
-ENV PATH /app/heroku/ruby/ruby-2.5.3/bin:$PATH
+RUN mkdir -p /app/heroku/ruby/ruby-2.5.7
+RUN curl -s --retry 3 -L https://heroku-buildpack-ruby.s3.amazonaws.com/cedar-14/ruby-2.5.7.tgz | tar xz -C /app/heroku/ruby/ruby-2.5.7
+ENV PATH /app/heroku/ruby/ruby-2.5.7/bin:$PATH
 
 # Install Node
 RUN curl -s --retry 3 -L http://s3pository.heroku.com/node/v10.14.2/node-v10.14.2-linux-x64.tar.gz | tar xz -C /app/heroku/ruby/
